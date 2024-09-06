@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
-class Search {
-    public Search() {}
+class binarySearch {
+    public binarySearch() {}
 
     // 이진탐색 알고리즘
     public int binarySearch(int[] numArray, int num) {
