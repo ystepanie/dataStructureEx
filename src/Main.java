@@ -14,6 +14,8 @@ public class Main {
         }
         System.out.println();
 
-        fibonacciEx fibonacciEx = new fibonacciEx(42);
+        fibonacciEx fibonacciEx = new fibonacciEx();
+        int answerDown = fibonacciEx.fibonacciDown(42); //하향식 피보나치
+        int answerUp = fibonacciEx.fibonacciUp(42); //상향식 피보나치
     }
 }
