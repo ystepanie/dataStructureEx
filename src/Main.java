@@ -31,18 +31,31 @@ public class Main {
         LinkedListNode node2 = new LinkedListNode(4, node1);
         LinkedListNode node3 = new LinkedListNode(3, node2);
         LinkedListNode node4 = new LinkedListNode(2, node3);
-        LinkedListNode node5 = new LinkedListNode(2, node4);
+        LinkedListNode node5 = new LinkedListNode(1, node4);
 
         LinkedListCalculate cal = new LinkedListCalculate();
 
+        // 3번째 인덱스 다음 값 보기
         LinkedListNode indexNode = cal.LinkedListLookUp(node5, 3);
-        // 3번째 인덱스에 어떤 값이 있나 테스트
         System.out.println(indexNode.value);
 
-        cal.LinkedListInsertAfter(node2, new LinkedListNode(6, node1));
-        // node2와 1 사이에 추가한 값이 제대로 들어갔는지 previous next pointer로 확인
-        System.out.println(node2.next);
+        // 연결리스트 추가가 제대로 되었나 테스트
+//        cal.LinkedListInsertAfter(node4, new LinkedListNode(3, node2));
+
+        // 연결리스트 삭제가 제대로 되었나 테스트
+//        cal.LinkedListDelete(node5, 3);
+
+        printSearch(node5);
 
 
+    }
+
+    private static void printSearch(LinkedListNode head) {
+        LinkedListNode current = head;
+        while(current.next != null) {
+            System.out.println("current value - " + current.value);
+            current = current.next;
+        }
+        System.out.println("current value - " + current.value);
     }
 }

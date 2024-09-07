@@ -51,4 +51,38 @@ public class LinkedListCalculate {
 
         return head;
     }
+
+    // n번째 값을 삭제해보자!
+    public LinkedListNode LinkedListDelete(LinkedListNode head, int index) {
+        // head null check
+        if(head == null) {
+            return null;
+        }
+
+        if(index == 0) {
+            LinkedListNode newHead = head.next;
+            head.next = null;
+            return newHead;
+        }
+
+        int count = 0;
+        LinkedListNode current = head;
+        LinkedListNode previous = null;
+        // 인덱스 값까지 순회한다. 도중에 null을 만나면 끝났다는 것.
+        while(count < index && current != null) {
+            previous = current;
+            current = current.next;
+            count++;
+        }
+
+        if(current != null) {
+            //현재의 값은 삭제하고 이전 값을 next를 삭제한 다음값으로 바꿔준다.
+            previous.next = current.next;
+            current.next = null;
+        } else {
+            System.out.println("index error!!!!");
+        }
+
+        return head;
+     }
 }
