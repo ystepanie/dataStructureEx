@@ -1,5 +1,7 @@
 import LinkedList.LinkedListCalculate;
 import LinkedList.LinkedListNode;
+import Stack.Stack;
+import Stack.StackCalculate;
 
 import java.math.BigInteger;
 
@@ -43,11 +45,20 @@ public class Main {
 //        cal.LinkedListInsertAfter(node4, new LinkedListNode(3, node2));
 
         // 연결리스트 삭제가 제대로 되었나 테스트
-//        cal.LinkedListDelete(node5, 3);
+        cal.LinkedListDelete(node5, 3);
 
-        printSearch(node5);
+//        printSearch(node5); // 연결리스트 프린트
 
+        Stack stack = new Stack(1, -1, new String[1]);
+        StackCalculate stackCal = new StackCalculate();
 
+        stackCal.Push(stack, "사과");
+        stackCal.Push(stack, "바나나");
+        stackCal.Push(stack, "바나나");
+        stackCal.Push(stack, "바나나");
+        stackCal.Push(stack, "바나나");
+        stackCal.Pop(stack);
+        stackCal.Peek(stack);
     }
 
     private static void printSearch(LinkedListNode head) {
