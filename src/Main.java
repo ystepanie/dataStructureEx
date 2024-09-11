@@ -2,6 +2,8 @@ import java.math.BigInteger;
 
 import LinkedList.LinkedListCalculate;
 import LinkedList.LinkedListNode;
+import Queue.Queue;
+import Queue.QueueCalculate;
 import Stack.ArrayListStack;
 import Stack.ArrayListStackCalculate;
 import Stack.LinkedListStack;
@@ -74,6 +76,17 @@ public class Main {
 		lStackCal.Push(lStack, "5");
 		lStackCal.Pop(lStack);
 		lStackCal.Peek(lStack);
+
+		/* 큐로 테스트!!! */
+		Queue queue = new Queue(null, null);
+		QueueCalculate qCal = new QueueCalculate();
+
+		qCal.Enqueue(queue, "1");
+		qCal.Enqueue(queue, "2");
+		qCal.Dequeue(queue);
+		qCal.Dequeue(queue);
+		qCal.Dequeue(queue);
+
 	}
 
 	private static void printSearch(LinkedListNode head) {
