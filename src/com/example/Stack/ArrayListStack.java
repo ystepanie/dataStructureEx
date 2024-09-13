@@ -1,4 +1,4 @@
-package Stack;
+package com.example.Stack;
 
 public class ArrayListStack {
 	public int arraySize;

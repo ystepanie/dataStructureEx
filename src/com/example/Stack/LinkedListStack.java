@@ -1,6 +1,6 @@
-package Stack;
+package com.example.Stack;
 
-import LinkedList.LinkedListNode;
+import com.example.LinkedList.LinkedListNode;
 
 public class LinkedListStack {
 	private LinkedListNode linkedListNode;

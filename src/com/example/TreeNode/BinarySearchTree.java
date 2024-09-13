@@ -1,4 +1,4 @@
-package TreeNode;
+package com.example.TreeNode;
 
 public class BinarySearchTree {
 	public TreeNode root;

@@ -1,4 +1,4 @@
-package LinkedList;
+package com.example.LinkedList;
 
 public class LinkedListCalculate {
 	public LinkedListCalculate() {

@@ -1,6 +1,6 @@
-package Queue;
+package com.example.Queue;
 
-import LinkedList.LinkedListNode;
+import com.example.LinkedList.LinkedListNode;
 
 public class QueueCalculate {
 

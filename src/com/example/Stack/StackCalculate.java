@@ -1,4 +1,4 @@
-package Stack;
+package com.example.Stack;
 
 public interface StackCalculate<T> {
 	public void Push(T s, String value);

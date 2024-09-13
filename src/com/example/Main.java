@@ -1,14 +1,19 @@
+package com.example;
+
 import java.math.BigInteger;
 
-import LinkedList.LinkedListCalculate;
-import LinkedList.LinkedListNode;
-import Queue.Queue;
-import Queue.QueueCalculate;
-import Stack.ArrayListStack;
-import Stack.ArrayListStackCalculate;
-import Stack.LinkedListStack;
-import Stack.LinkedListStackCalculate;
-import Stack.StackCalculate;
+import com.example.LinkedList.LinkedListCalculate;
+import com.example.LinkedList.LinkedListNode;
+import com.example.Queue.Queue;
+import com.example.Queue.QueueCalculate;
+import com.example.Stack.ArrayListStack;
+import com.example.Stack.ArrayListStackCalculate;
+import com.example.Stack.LinkedListStack;
+import com.example.Stack.LinkedListStackCalculate;
+import com.example.Stack.StackCalculate;
+import com.example.TreeNode.BinarySearchTree;
+import com.example.TreeNode.Dfs;
+import com.example.TreeNode.TreeNode;
 
 public class Main {
 	public static void main(String[] args) {
@@ -79,7 +84,7 @@ public class Main {
 
 		/* 큐로 테스트!!! */
 		Queue queue = new Queue(null, null);
-		QueueCalculate qCal = new QueueCalculate();
+		QueueCalculate qCal = new com.example.Queue.QueueCalculate();
 
 		qCal.Enqueue(queue, "1");
 		qCal.Enqueue(queue, "2");
@@ -87,6 +92,25 @@ public class Main {
 		qCal.Dequeue(queue);
 		qCal.Dequeue(queue);
 
+		/* dfs 테스트!!! */
+		TreeNode treeNode1 = new TreeNode();
+		TreeNode treeNode2 = new TreeNode();
+		TreeNode treeNode3 = new TreeNode();
+
+		treeNode1.setValue(100);
+		treeNode1.setParent(treeNode2);
+		treeNode2.setValue(200);
+		treeNode2.setLeft(treeNode1);
+		treeNode2.setRight(treeNode3);
+		treeNode3.setValue(300);
+		treeNode3.setParent(treeNode2);
+
+		Dfs dfs = new Dfs();
+		dfs.FindValue(treeNode2, 300);
+		dfs.InsertTreeNode(new BinarySearchTree(treeNode2), 102);
+		dfs.InsertTreeNode(new BinarySearchTree(treeNode2), 202);
+		dfs.RemoveTreeNode(new BinarySearchTree(treeNode2), treeNode2);
+		// dfs.RemoveTreeNode(new BinarySearchTree(treeNode2), treeNode3);
 	}
 
 	private static void printSearch(LinkedListNode head) {

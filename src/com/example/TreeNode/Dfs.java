@@ -1,4 +1,4 @@
-package TreeNode;
+package com.example.TreeNode;
 
 public class Dfs {
 	public Dfs() {
@@ -8,8 +8,10 @@ public class Dfs {
 	public TreeNode FindValue(TreeNode current, int target) {
 		if (current == null)
 			return null;
-		if (target == current.value)
+		if (target == current.value) {
+			System.out.println("current value - " + current.value);
 			return current;
+		}
 
 		if (target < current.value && current.left != null) {
 			return FindValue(current.left, target);
@@ -33,6 +35,7 @@ public class Dfs {
 			}
 		}
 
+		System.out.println("find value - " + root.value);
 		return root;
 	}
 
@@ -47,7 +50,8 @@ public class Dfs {
 	// 최상위 값 넣기
 	public void InsertTreeNode(BinarySearchTree tree, int value) {
 		if (tree.root == null) {
-			tree.root = new TreeNode(value, null, null, null);
+			tree.root = new TreeNode();
+			tree.root.setValue(value);
 		} else {
 			InsertNode(tree.root, value);
 		}
@@ -63,13 +67,19 @@ public class Dfs {
 			if (current.left != null) {
 				InsertNode(current.left, value);
 			} else {
-				current.left = new TreeNode(value, null, null, current);
+				System.out.println("insert left value - " + value);
+				current.left = new TreeNode();
+				current.left.setValue(value);
+				current.left.setParent(current);
 			}
 		} else {
 			if (current.right != null) {
 				InsertNode(current.right, value);
 			} else {
-				current.right = new TreeNode(value, null, null, current);
+				System.out.println("insert right value - " + value);
+				current.right = new TreeNode();
+				current.right.setValue(value);
+				current.right.setParent(current);
 			}
 		}
 
@@ -89,6 +99,7 @@ public class Dfs {
 			} else {
 				node.parent.right = null;
 			}
+			System.out.println("delete leaf node");
 			return;
 		}
 
@@ -108,6 +119,7 @@ public class Dfs {
 			} else {
 				node.parent.right = child;
 			}
+			System.out.println("delete one child node");
 			return;
 		}
 
@@ -138,6 +150,7 @@ public class Dfs {
 			if (node.right != null) {
 				node.right.parent = successor;
 			}
+			System.out.println("delete two child node and successor=" + successor.value);
 		}
 	}
 }
