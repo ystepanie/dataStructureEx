@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/dataStructureEx.iml" filepath="$PROJECT_DIR$/dataStructureEx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dataStructureEx.jmh.iml" filepath="$PROJECT_DIR$/.idea/modules/dataStructureEx.jmh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dataStructureEx.main.iml" filepath="$PROJECT_DIR$/.idea/modules/dataStructureEx.main.iml" />
     </modules>
   </component>
 </project>
