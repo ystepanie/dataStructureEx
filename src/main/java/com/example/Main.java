@@ -125,6 +125,5 @@ public class Main {
 		dfs.InsertTreeNode(new BinarySearchTree(treeNode2), 102);
 		dfs.InsertTreeNode(new BinarySearchTree(treeNode2), 202);
 		dfs.RemoveTreeNode(new BinarySearchTree(treeNode2), treeNode2);
-		// dfs.RemoveTreeNode(new BinarySearchTree(treeNode2), treeNode3);
 	}
 }
