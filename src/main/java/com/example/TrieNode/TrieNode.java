@@ -1,13 +1,11 @@
 package com.example.TrieNode;
 
-import java.util.List;
-
 public class TrieNode {
 	boolean isEntry;
-	List<TrieNode> children;
+	TrieNode[] children;
 
-	public TrieNode(boolean isEntry, List<TrieNode> children) {
-		this.isEntry = isEntry;
-		this.children = children;
+	public TrieNode() {
+		this.isEntry = false;
+		this.children = new TrieNode[26]; // 영어 기준 알파벳 개수
 	}
 }
